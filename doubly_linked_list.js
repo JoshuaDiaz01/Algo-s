@@ -137,6 +137,91 @@ class DoublyLinkedList {
   }
 }
 
+
+  /**
+   * TODO: implement this method
+   * Inserts a new node with the given newVal after the node that has the
+   * given targetVal as it's data.
+   * - Time: O(?).
+   * - Space: O(?).
+   * @param {any} targetVal The node data to find.
+   * @param {any} newVal Data for the new node.
+   * @returns {boolean} Indicates if the new node was added.
+   */
+    function insertAfter(targetVal, newVal) {
+      if (this.isEmpty()) {
+        return false;
+      }
+  
+      let runner = this.head;
+  
+      // runner && is in case runner becomes null so we don't check null.data
+      while (runner && runner.data !== targetVal) {
+        runner = runner.next;
+      }
+  
+      if (runner === null) {
+        return false;
+      }
+  
+      const newNode = new DLLNode(newVal);
+      newNode.prev = runner;
+      newNode.next = runner.next;
+  
+      if (runner === this.tail) {
+        this.tail = newNode;
+      } else {
+        // if runner was tail then next would be null.
+        runner.next.prev = newNode;
+      }
+  
+      runner.next = newNode;
+      return true;
+    }
+
+   /**
+    * TODO: implement this method
+    * Inserts a new node with the given newVal before the node that has the
+    * given targetVal as it's data.
+    * - Time: O(?).
+    * - Space: O(?).
+    * @param {any} targetVal The node data to find.
+    * @param {any} newVal Data for the new node.
+    * @returns {boolean} Indicates if the new node was added.
+    */
+    function insertBefore(targetVal, newVal) {
+      if (this.isEmpty()) {
+        return false;
+      }
+  
+      let runner = this.head;
+  
+      // This was written with a different structure than insertAfter to
+      // for comparison purposes but the logic is almost the same.
+      while (runner) {
+        if (runner.data === targetVal) {
+          const newNode = new DLLNode(newVal);
+          newNode.next = runner;
+          newNode.prev = runner.prev;
+  
+          if (runner === this.head) {
+            this.head = newNode;
+          } else {
+            // if runner was head then prev would be null.
+            runner.prev.next = newNode;
+          }
+  
+          runner.prev = newNode;
+          return true;
+        }
+  
+        runner = runner.next;
+      }
+      return false;
+    }
+
+
+
 const emptyList = new DoublyLinkedList();
 
 /**************** Uncomment these test lists after insertAtBack is created. ****************/
