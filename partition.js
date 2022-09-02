@@ -96,3 +96,13 @@ function partition(nums, leftIdx = 0, rightIdx = nums.length - 1) {
     rightIdx -= 1;
   }
 }
+module.exports = {
+    partition: partition,
+};
+
+// if (left < right) {
+//   const pivotIndex = partition(nums, left, right);
+//   quickSort(nums, left, pivotIndex);
+//   quickSort(nums, pivotIndex + 1, right);
+// }
+// return nums;
