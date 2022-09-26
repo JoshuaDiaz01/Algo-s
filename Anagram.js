@@ -23,19 +23,33 @@
 //this will lower complexity and will only analyze number of specific letters are in the hashmap
 
 
-let s = "caat"
-let t = "tacat"
+// let s = "caat"
+// let t = "tacat"
 
+
+// var isAnagram = function (s,t){
+//     //first check the length of both strings
+//     if (s.length !== t.length) {
+//         return false
+//     }
+//     //initialize our objects
+//     const sCount = {}
+//     const tCount = {}
+
+//     const sLength = s.length
+
+// }
+
+let s = "win"
+let t = "iwn"
 
 var isAnagram = function (s,t){
-    //first check the length of both strings
-    if (s.length !== t.length) {
-        return false
-    }
-    //initialize our objects
-    const sCount = {}
-    const tCount = {}
+    //first we are going to split the strings and sort them, then finally join them to compare if they are the same strings
+    const sSorted = s.split('').sort().join('')
+    const tSorted = t.split('').sort().join('')
 
-    const sLength = s.length
-    
+    if (sSorted === tSorted) return "is anagram"
+    else return "not anagram"
 }
+
+console.log(isAnagram(s,t))

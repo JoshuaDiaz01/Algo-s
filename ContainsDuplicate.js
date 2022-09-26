@@ -20,22 +20,40 @@
 
 //hash table allows us to store keys and values 
 //hash tables can be good for not having two for loops
+// let test1 = [1,2,3,4,2]
+// let test2 = [1,2,3,4,5]
+
+// var containsDuplicate = function (nums) {
+//     //initialize hash table to store keys and values
+//     let hTable = {}
+//     for (let i = 0; i < nums.length; i++){
+//         //have we seen this number at i before?
+//         if(nums[i] in hTable){
+//             return true
+//         }
+//         //if we havent seen the number it will get stored in hash table as 1:1
+//         hTable[nums[i]] = 1;
+//     }
+//     return false
+// }
+
+// console.log(containsDuplicate(test1))
+// console.log(containsDuplicate(test2))
+
+
 let test1 = [1,2,3,4,2]
 let test2 = [1,2,3,4,5]
-
 var containsDuplicate = function (nums) {
-    //initialize hash table to store keys and values
-    let hTable = {}
-    for (let i = 0; i < nums.length; i++){
-        //have we seen this number at i before?
-        if(nums[i] in hTable){
+    //intitialize hash map
+    let hashMap = {}
+    //iterate through array and see if the index at i is in the hashmap
+    for (let i =0; i<nums.length; i++){
+        if (nums[i] in hashMap){
             return true
         }
-        //if we havent seen the number it will get stored in hash table as 1:1
-        hTable[nums[i]] = 1;
+        hashMap[nums[i]] = 1;
     }
     return false
 }
-
 console.log(containsDuplicate(test1))
 console.log(containsDuplicate(test2))
