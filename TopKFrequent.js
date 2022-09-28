@@ -1,5 +1,6 @@
 
-nums = [1,1,1,2,2,3], k = 2
+nums = [1,1,1,2,2,3]
+k = 2
 //expected [1,2]
 //how many times did an element occur? think of a hashmap
 //bucket sort method
@@ -51,3 +52,5 @@ var topKFrequent = function(nums, k) {
     //slice turns [1,2,3] into [1,2]
     return res.slice(0,k)
 }
+
+console.log(topKFrequent(nums,k))
