@@ -22,17 +22,28 @@
 const nums1 = [2,7,5,6,8]
 const target = 9
 
+// var twoSum = function (nums, target){
+//     // we can iterate through array looking at i and j, if the target is equal to the sum of i and j, return [i,j]
+//     for (var i = 0; i < nums.length; i++){
+//         //let j = i+1 to be able to compare both indexes
+//         for (var j = i + 1; j<nums.length; j++){
+//             if (nums[i] + nums[j] === target){
+//                 return [i,j];
+//             }
+//         }
+//     }
+// }
+
+// console.log(twoSum(nums1, target))
+
 var twoSum = function (nums, target){
-    // we can iterate through array looking at i and j, if the target is equal to the sum of i and j, return [i,j]
-    for (var i = 0; i < nums.length; i++){
-        //let j = i+1 to be able to compare both indexes
-        for (var j = i + 1; j<nums.length; j++){
+    //itterate through nums array
+    for (let i =0; i <nums.length; i++){
+        //itterate through j array to compare the array
+        for(let j = i+1; j<nums.length; j++){
             if (nums[i] + nums[j] === target){
                 return [i,j];
             }
         }
     }
 }
-
-console.log(twoSum(nums1, target))
-
