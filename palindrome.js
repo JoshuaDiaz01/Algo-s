@@ -26,4 +26,25 @@ let s = "A man, a plan, a canal: Panama"
 // console.log(isPalindrome(s))
 
 
+var isPalindrome = function (s){
+    //first create regex
+    s = s.replace(/[^a-z0-9]/gi,"")
 
+    //initiate left and right index
+    leftIndex = 0
+    rightindex = s.length-1
+
+    //while considtion for the structure of the rest of thhe algo
+    while (leftIndex < rightindex){
+        //first condition will check if it is not a palindrome 
+        if(s[leftIndex].toLowerCase() !== s[rightindex].toLowerCase()){
+            return "not a palindrome"
+        }
+        //will run these next two lines until left index is greator 
+        leftIndex ++
+        rightindex --
+    }
+    return "is palindrome"
+}
+
+console.log(isPalindrome(s));
