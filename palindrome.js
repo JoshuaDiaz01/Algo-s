@@ -26,25 +26,50 @@ let s = "A man, a plan, a canal: Panama"
 // console.log(isPalindrome(s))
 
 
-var isPalindrome = function (s){
-    //first create regex
-    s = s.replace(/[^a-z0-9]/gi,"")
+// var isPalindrome = function (s){
+//     //first create regex
+//     s = s.replace(/[^a-z0-9]/gi,"")
 
-    //initiate left and right index
-    leftIndex = 0
-    rightindex = s.length-1
+//     //initiate left and right index
+//     leftIndex = 0
+//     rightindex = s.length-1
 
-    //while considtion for the structure of the rest of thhe algo
-    while (leftIndex < rightindex){
-        //first condition will check if it is not a palindrome 
-        if(s[leftIndex].toLowerCase() !== s[rightindex].toLowerCase()){
-            return "not a palindrome"
+//     //while considtion for the structure of the rest of thhe algo
+//     while (leftIndex < rightindex){
+//         //first condition will check if it is not a palindrome 
+//         if(s[leftIndex].toLowerCase() !== s[rightindex].toLowerCase()){
+//             return "not a palindrome"
+//         }
+//         //will run these next two lines until left index is greator 
+//         leftIndex ++
+//         rightindex --
+//     }
+//     return "is palindrome"
+// }
+
+// console.log(isPalindrome(s));
+
+
+var isPalindrome = function (s) {
+    //must create regex to replace all special characters
+    s = s.replace(/[^a-z0-9]/gi,"");
+    console.log(s);
+    //must initiate left and right index pointers
+    let leftIndex = 0
+    let rightIndex = s.length-1
+
+    //create while loop that runs until left is smaller than right
+    while(leftIndex < rightIndex ){
+        //if not a palindrome
+        if (s[leftIndex].toLowerCase() !== s[rightIndex].toLowerCase()){
+            return "is not a palindrome"
         }
-        //will run these next two lines until left index is greator 
+
+        //will incriment left and decrement right
         leftIndex ++
-        rightindex --
+        rightIndex --
     }
-    return "is palindrome"
+    return "is a palindrome"
 }
 
 console.log(isPalindrome(s));
