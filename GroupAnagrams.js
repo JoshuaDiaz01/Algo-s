@@ -1,5 +1,5 @@
 //group anagrams in an array of strings
-
+//anagram is a set of letters you can use to spell multiple words
 //Input: strs = ["eat","tea","tan","ate","nat","bat"]
 //Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
 
