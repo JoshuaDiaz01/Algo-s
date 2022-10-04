@@ -50,26 +50,50 @@ let s = "A man, a plan, a canal: Panama"
 // console.log(isPalindrome(s));
 
 
-var isPalindrome = function (s) {
-    //must create regex to replace all special characters
-    s = s.replace(/[^a-z0-9]/gi,"");
-    console.log(s);
-    //must initiate left and right index pointers
-    let leftIndex = 0
-    let rightIndex = s.length-1
+// var isPalindrome = function (s) {
+//     //must create regex to replace all special characters
+//     s = s.replace(/[^a-z0-9]/gi,"");
+//     console.log(s);
+//     //must initiate left and right index pointers
+//     let leftIndex = 0
+//     let rightIndex = s.length-1
 
-    //create while loop that runs until left is smaller than right
-    while(leftIndex < rightIndex ){
+//     //create while loop that runs until left is smaller than right
+//     while(leftIndex < rightIndex ){
+//         //if not a palindrome
+//         if (s[leftIndex].toLowerCase() !== s[rightIndex].toLowerCase()){
+//             return "is not a palindrome"
+//         }
+
+//         //will incriment left and decrement right
+//         leftIndex ++
+//         rightIndex --
+//     }
+//     return "is a palindrome"
+// }
+
+// console.log(isPalindrome(s));
+
+var isPalindrome = function(str){
+    //create regex
+    s= s.replace(/[^a-z0-9]/gi,"")
+
+    //initiate left and right pointers
+    let leftIndex = 0
+    let rightIndex = str.leftIndex-1
+
+    //create while loop to see if palindrome crosses to the left
+    while(leftIndex<rightIndex){
         //if not a palindrome
-        if (s[leftIndex].toLowerCase() !== s[rightIndex].toLowerCase()){
+        if(s[leftIndex].toLowerCase() !== s[rightIndex].toLowerCase()){
             return "is not a palindrome"
         }
-
-        //will incriment left and decrement right
+        //if it doesnt fall in that, incriment left, decrement right
         leftIndex ++
         rightIndex --
     }
+    //if it breaks out of this while loop it is a palindrome
     return "is a palindrome"
+
 }
 
-console.log(isPalindrome(s));
