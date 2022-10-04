@@ -49,23 +49,47 @@ strs = ["eat","tea","tan","ate","nat","bat"];
 //     return Object.values(hash)
 // }
 
+// var groupAnagrams = function (strs) {
+//     //sort the strings 
+//     const sortedStrs = strs.map(word => word.split('').sort().join(''))
+//     // initialize the hash
+//     hash = {}
+
+//     //loop through hash
+//     for (let i = 0; i<strs.length; i++){
+//         //if there is no anagram, set the strings to i
+//         if(!hash[strs[i]]){
+//             hash[sortedStrs[i]] = [strs[i]]
+//         }
+//         //if it is anagram set strs at i to sorted strs i
+//         else{
+//             hash[sortedStrs[i]].push(strs[i])
+//         }
+//     }
+//     return Object.values(hash)
+// }
+
 var groupAnagrams = function (strs) {
-    //sort the strings 
-    const sortedStrs = strs.map(word => word.split('').sort().join(''))
-    // initialize the hash
+    const sortedStrs = strs.map(word => word.split('').sort().join());
+
+    console.log(sortedStrs)
+    //do hash so we can store the words that are anagrams into their groups
     hash = {}
 
-    //loop through hash
+    //loop through the strings
     for (let i = 0; i<strs.length; i++){
-        //if there is no anagram, set the strings to i
-        if(!hash[strs[i]]){
-            hash[sortedStrs[i]] = [strs[i]]
+        //if hash[sorted strs] is not true
+        //if it isnt an anagram
+        if(!hash[sortedStrs]){
+            hash[sortedStrs] = strs[i]
         }
-        //if it is anagram set strs at i to sorted strs i
+        //if it is an anagram, then replace original strs array 
         else{
             hash[sortedStrs[i]].push(strs[i])
         }
     }
     return Object.values(hash)
+
 }
 
+console.log(groupAnagrams(strs))

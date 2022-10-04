@@ -66,33 +66,62 @@ nums = [100,4,200,1,3,2]
 // }
 // console.log(longestConsecutive(nums))
 
-var longestConsecutive = function (nums){
-    if (nums === null || nums.length === 0) return null
+// var longestConsecutive = function (nums){
+//     if (nums === null || nums.length === 0) return null
 
-    //must create set to remember the nums 
+//     //must create set to remember the nums 
 
-    const set = new Set(nums) 
-    // initiate max 
+//     const set = new Set(nums) 
+//     // initiate max 
+//     let max = 0
+
+//     //have a for loop that goes through the set
+
+//     for (let num of set){
+//         //if set has num that is less than one, continue this is not the beginning
+//         if(set.has(num-1)){
+//             continue
+//         }
+//         //this is the beginning of the sequence
+//         let currNum = num
+//         let currMax = 1
+//         //create while loop to say while set.has num+1 incriment currmax and currnum
+//         while(set.has(num+1)){
+//             currMax++
+//             currNum++
+//         }
+//         max = Math.max(max, currMax)
+//     }
+//     return max
+// }
+
+// console.log(longestConsecutive(nums));
+
+var longestConsecutive = function (nums) {
+    //initiate set
+    let set = new Set(nums)
+
+    if(nums === null || nums.length=== 0){
+        return null
+    }
+
     let max = 0
 
-    //have a for loop that goes through the set
-
-    for (let num of set){
-        //if set has num that is less than one, continue this is not the beginning
+    //loop through set and see if the set has any numbers thats smaller than it by one
+    for(let num of set){
         if(set.has(num-1)){
+            //continue through the function bc this isnt the beginning
             continue
         }
-        //this is the beginning of the sequence
-        let currNum = num
+        //initiate currmax and curr num
         let currMax = 1
-        //create while loop to say while set.has num+1 incriment currmax and currnum
+        let currNum = num
+        // create while loop to say as long as set has num greater than itself by one, increase both currmax and curr num
         while(set.has(num+1)){
             currMax++
             currNum++
         }
-        max = Math.max(max, currMax)
+        max = Math.max(max,currMax)
     }
     return max
 }
-
-console.log(longestConsecutive(nums));
