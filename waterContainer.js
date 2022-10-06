@@ -30,20 +30,42 @@ let height = [1,8,6,2,5,4,8,3,7]
 
 // console.log(maxArea(height))
 
+// var maxArea = function (height){
+//     //using pointer method need to define beginning and end
+//     let left = 0
+//     let right = height.length-1
+//     let area = 0
+
+//     //we are going to compare the pointers while i <j
+//     while (left<right){
+//         //need temp variable for area. j-i will get us the difference
+//         let temp = (j-i)*Math.min(height[i], height[j])
+//         //updat area 
+//         area = Math.max(area,temp)
+//         //if height i is greator this means we found one max area, now just find the other with the while loop
+//         if (height[i]>height[j]){
+//             j--
+//         }
+//         else{
+//             i++
+//         }
+//     }
+//     return area
+// }
+
 var maxArea = function (height){
-    //using pointer method need to define beginning and end
+    //use pointer method 
     let left = 0
-    let right = height.length-1
+    let right = height.lenght-1
     let area = 0
 
-    //we are going to compare the pointers while i <j
-    while (left<right){
-        //need temp variable for area. j-i will get us the difference
+    //do while loop until left is bigger than right
+    while(left<right){
+        //establish temp 
         let temp = (j-i)*Math.min(height[i], height[j])
-        //updat area 
         area = Math.max(area,temp)
-        //if height i is greator this means we found one max area, now just find the other with the while loop
-        if (height[i]>height[j]){
+        //height[i] 
+        if(height[i]>height[j]){
             j--
         }
         else{
