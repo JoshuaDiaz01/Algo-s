@@ -26,6 +26,7 @@ let prices = [7,1,5,3,6,4]
 //keep a running minimum and set it to the min price
 function maxProfit(prices){
     let mxProf = 0
+    //infinity is the lowest min
     let minVal = Infinity;
     for(let i = 0; i<prices.length; i++){
         //we find the min and update min val
