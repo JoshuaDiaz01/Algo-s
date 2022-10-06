@@ -24,16 +24,29 @@ let prices = [7,1,5,3,6,4]
 
 //o(n) solution
 //keep a running minimum and set it to the min price
+// function maxProfit(prices){
+//     let mxProf = 0
+//     //infinity is the lowest min
+//     let minVal = Infinity;
+//     for(let i = 0; i<prices.length; i++){
+//         //we find the min and update min val
+//         minVal = Math.min(minVal,prices[i])
+//         //we subtract prices[i]- minval bc 
+//         mxProf = Math.max(mxProf, prices[i]-minVal)
+//     }
+//     return mxProf
+// }
+// console.log(maxProfit(prices))
+
 function maxProfit(prices){
-    let mxProf = 0
-    //infinity is the lowest min
-    let minVal = Infinity;
-    for(let i = 0; i<prices.length; i++){
-        //we find the min and update min val
-        minVal = Math.min(minVal,prices[i])
-        //we subtract prices[i]- minval bc 
-        mxProf = Math.max(mxProf, prices[i]-minVal)
+    let maxprof = 0
+    let minVal = Infinity
+    //loop through prices
+    for(let i=0; i<prices.length; i++){
+        //we want to set a running min until the mininum is found
+        minVal = Math.max(minVal,prices[i])
+        //need a max so we do same thing
+        maxprof = Math.max(maxProfit, prices[i] - minVal)
     }
-    return mxProf
+    return maxprof
 }
-console.log(maxProfit(prices))
