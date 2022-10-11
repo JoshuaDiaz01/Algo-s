@@ -51,7 +51,7 @@ var containsDuplicate = function (nums) {
         if (nums[i] in hashMap){
             return true
         }
-        hashMap[nums[i]] = 1;
+        hashMap[nums[i]] = nums[i]
     }
     return false
 }
