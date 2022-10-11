@@ -36,14 +36,25 @@ const target = 9
 
 // console.log(twoSum(nums1, target))
 
-var twoSum = function (nums, target){
-    //itterate through nums array
-    for (let i =0; i <nums.length; i++){
-        //itterate through j array to compare the array
-        for(let j = i+1; j<nums.length; j++){
+// var twoSum = function (nums, target){
+//     //itterate through nums array
+//     for (let i =0; i <nums.length; i++){
+//         //itterate through j array to compare the array
+//         for(let j = i+1; j<nums.length; j++){
+//             if (nums[i] + nums[j] === target){
+//                 return [i,j];
+//             }
+//         }
+//     }
+// }
+
+function twoSum(nums, target){
+    for (let i =0; i<nums.length; i++){
+        for(let j = i+1; j<nums.length; i++){
             if (nums[i] + nums[j] === target){
                 return [i,j];
             }
         }
     }
 }
+
