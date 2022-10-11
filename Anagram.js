@@ -43,13 +43,24 @@
 let s = "win"
 let t = "iwn"
 
-var isAnagram = function (s,t){
-    //first we are going to split the strings and sort them, then finally join them to compare if they are the same strings
-    const sSorted = s.split('').sort().join('')
-    const tSorted = t.split('').sort().join('')
+// var isAnagram = function (s,t){
+//     //first we are going to split the strings and sort them, then finally join them to compare if they are the same strings
+//     const sSorted = s.split('').sort().join('')
+//     const tSorted = t.split('').sort().join('')
 
-    if (sSorted === tSorted) return "is anagram"
-    else return "not anagram"
+//     if (sSorted === tSorted) return "is anagram"
+//     else return "not anagram"
+// }
+
+// console.log(isAnagram(s,t))
+
+function isAnagram(s,t){
+    let sortedS = s.split('').sort().join('')
+    let sortedT = t.split('').sort().join('')
+
+    if(sortedS === sortedT){
+        return "is anagram"
+    }else return "not anagram"
 }
 
 console.log(isAnagram(s,t))
