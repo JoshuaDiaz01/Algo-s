@@ -43,17 +43,33 @@
 
 let test1 = [1,2,3,4,2]
 let test2 = [1,2,3,4,5]
-var containsDuplicate = function (nums) {
-    //intitialize hash map
-    let hashMap = {}
-    //iterate through array and see if the index at i is in the hashmap
-    for (let i =0; i<nums.length; i++){
-        if (nums[i] in hashMap){
+// var containsDuplicate = function (nums) {
+//     //intitialize hash map
+//     let hashMap = {}
+//     //iterate through array and see if the index at i is in the hashmap
+//     for (let i =0; i<nums.length; i++){
+//         if (nums[i] in hashMap){
+//             return true
+//         }
+//         hashMap[nums[i]] = nums[i]
+//     }
+//     return false
+// }
+// console.log(containsDuplicate(test1))
+// console.log(containsDuplicate(test2))
+
+function containsDuplicate(nums) {
+    //use hashmap to store data and check if the nums are already in the hashmap
+    let hash = {}
+
+    for (let i = 0; i<nums.length; i++){
+        //if nums in hashmap then return true
+        if (nums[i] in hash){
             return true
         }
-        hashMap[nums[i]] = nums[i]
+        //if not then just store the num 
+        hash[nums[i]] = nums[i]
     }
     return false
 }
-console.log(containsDuplicate(test1))
-console.log(containsDuplicate(test2))
+
