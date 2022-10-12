@@ -53,24 +53,56 @@ let height = [1,8,6,2,5,4,8,3,7]
 //     return area
 // }
 
-var maxArea = function (height){
-    //use pointer method 
+// var maxArea = function (height){
+//     //use pointer method 
+//     let left = 0
+//     let right = height.length-1
+//     let area = 0
+
+//     //do while loop until left is bigger than right
+//     while(left<right){
+//         //establish temp
+//         //finding area: right- left gives width
+//         //math.min gives height bottleneck
+//         let tempArea = (right-left)*Math.min(height[left], height[right])
+//         area = Math.max(area,tempArea)
+//         //height[i] 
+//         if(height[left]>height[right]){
+//             right--
+//         }
+//         else{
+//             left++
+//         }
+//     }
+//     return area
+// }
+
+// console.log(maxArea(height))
+
+function maxArea(height){
+
+    //use pointers for a while loop olsution that can be o(n)
     let left = 0
-    let right = height.lenght-1
+    let right = height.length-1
     let area = 0
 
-    //do while loop until left is bigger than right
-    while(left<right){
-        //establish temp 
-        let temp = (j-i)*Math.min(height[i], height[j])
-        area = Math.max(area,temp)
-        //height[i] 
-        if(height[i]>height[j]){
-            j--
+    //establish while loop
+    while (left<right){
+        //temparea is going to represent the area of the containers
+        //width = (right-left)
+        //height = min(height(left), height(right))
+        tempArea = (right-left)*Math.min(height[left], height[right])
+        area = Math.max(area,tempArea)
+
+        //again finding bottleneck
+        if(height[left]>height[right]){
+            right--
         }
         else{
-            i++
+            left++
         }
     }
     return area
+
 }
+console.log(maxArea(height))
