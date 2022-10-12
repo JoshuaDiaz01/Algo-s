@@ -74,26 +74,24 @@ let s = "A man, a plan, a canal: Panama"
 
 // console.log(isPalindrome(s));
 
-var isPalindrome = function(str){
-    //create regex
-    s= s.replace(/[^a-z0-9]/gi,"")
+// 
+function palindrome(s){
+    //non alphanumerical inputs
+    //use regex
+    s = s.replace(/[^a-z0-9]/gi,"")
+    //initiate our pointers
+    let leftIndex = 0 
+    let rightIndex = s.length-1
 
-    //initiate left and right pointers
-    let leftIndex = 0
-    let rightIndex = str.leftIndex-1
-
-    //create while loop to see if palindrome crosses to the left
+    //while loop for crossing of right index
     while(leftIndex<rightIndex){
-        //if not a palindrome
         if(s[leftIndex].toLowerCase() !== s[rightIndex].toLowerCase()){
             return "is not a palindrome"
         }
-        //if it doesnt fall in that, incriment left, decrement right
-        leftIndex ++
-        rightIndex --
+        leftIndex++
+        rightIndex--
     }
-    //if it breaks out of this while loop it is a palindrome
     return "is a palindrome"
-
 }
 
+console.log(palindrome(s))
