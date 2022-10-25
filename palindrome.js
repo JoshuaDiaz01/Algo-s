@@ -94,4 +94,5 @@ function palindrome(s){
     return "is a palindrome"
 }
 
+
 console.log(palindrome(s))
