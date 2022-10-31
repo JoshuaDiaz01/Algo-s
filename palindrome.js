@@ -113,7 +113,7 @@ function palindrome(s){
         leftIndex++
         rightIndex--
     }
-    return "is a palindrome"
+        return "is a palindrome"
 }
 
 
