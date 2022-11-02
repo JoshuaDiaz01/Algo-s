@@ -155,4 +155,5 @@ function longestConsecutive(nums){
 return max
 
 }
+
 console.log(longestConsecutive(nums))
