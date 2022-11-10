@@ -128,6 +128,36 @@ nums = [100,4,200,1,3,2]
 // }
 // console.log(longestConsecutive(nums));
 
+// function longestConsecutive(nums){
+//     //initiate set
+//     let set = new Set(nums)
+//     let max = 0
+
+//     if (nums === null || nums.length === 0) return 0
+
+//     //loop through set
+//     for (let num of set){
+//         //this is not the beginning
+//         if(set.has(num-1)) continue
+    
+//     //now this is the beginning
+//     let currMax = 0
+//     let currNum = num
+
+//     //while set has a num +1 incriment those two
+//     while(set.has(num+1)){
+//         currMax++
+//         currMax++
+//     }
+//     max = Math.max(max,currMax)
+
+// }
+// return max
+
+// }
+
+// console.log(longestConsecutive(nums))
+
 function longestConsecutive(nums){
     //initiate set
     let set = new Set(nums)
