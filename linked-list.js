@@ -301,6 +301,51 @@ class SinglyLinkedList {
   // ==============================================================
 
 
+// /**
+//  * Removes the node that has the matching given val as it's data.
+//  * - Time: O(?).
+//  * - Space: O(?).
+//  * @param {any} val The value to compare to the node's data to find the
+//  *    node to be removed.
+//  * @returns {boolean} Indicates if a node was removed or not.
+//  */
+// function removeVal(val) {
+
+// }
+
+// // EXTRA
+// /**
+//  * Inserts a new node before a node that has the given value as its data.
+//  * - Time: O(?).
+//  * - Space: O(?).
+//  * @param {any} newVal The value to use for the new node that is being added.
+//  * @param {any} targetVal The value to use to find the node that the newVal
+//  *    should be inserted in front of.
+//  * @returns {boolean} To indicate whether the node was pre-pended or not.
+//  */
+// prepend(newVal, targetVal) { }
+// }
+
+// /******************************************************************* 
+// Multiple test lists already constructed to test your methods on.
+// Below commented code depends on insertAtBack method to be completed,
+// after completing it, uncomment the code.
+// */
+// const emptyList = new SinglyLinkedList();
+
+// const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
+// const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
+// const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
+// const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
+// const unorderedList = new SinglyLinkedList().insertAtBackMany([-5, -10, 4, -3, 6, 1, -7, -2,]);
+
+// console.log(biNodeList.secondToLast());
+// console.log(singleNodeList.secondToLast());
+// console.log(firstThreeList.secondToLast());
+
+// // Print your list like so:
+// // console.log(firstThreeList.toArr());
+
 /**
  * Removes the node that has the matching given val as it's data.
  * - Time: O(?).
@@ -309,9 +354,9 @@ class SinglyLinkedList {
  *    node to be removed.
  * @returns {boolean} Indicates if a node was removed or not.
  */
-function removeVal(val) {
+//  function removeVal(val) {
 
-}
+// }
 
 // EXTRA
 /**
@@ -323,25 +368,25 @@ function removeVal(val) {
  *    should be inserted in front of.
  * @returns {boolean} To indicate whether the node was pre-pended or not.
  */
-prepend(newVal, targetVal) { }
-}
+// prepend(newVal, targetVal) { }
+// }
 
 /******************************************************************* 
 Multiple test lists already constructed to test your methods on.
 Below commented code depends on insertAtBack method to be completed,
 after completing it, uncomment the code.
 */
-const emptyList = new SinglyLinkedList();
+// const emptyList = new SinglyLinkedList();
 
-const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
-const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
-const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
-const unorderedList = new SinglyLinkedList().insertAtBackMany([-5, -10, 4, -3, 6, 1, -7, -2,]);
+// const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
+// const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
+// const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
+// const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
+// const unorderedList = new SinglyLinkedList().insertAtBackMany([-5, -10, 4, -3, 6, 1, -7, -2,]);
 
-console.log(biNodeList.secondToLast());
-console.log(singleNodeList.secondToLast());
-console.log(firstThreeList.secondToLast());
+// console.log(biNodeList.secondToLast());
+// console.log(singleNodeList.secondToLast());
+// console.log(firstThreeList.secondToLast());
 
 // Print your list like so:
 // console.log(firstThreeList.toArr());
