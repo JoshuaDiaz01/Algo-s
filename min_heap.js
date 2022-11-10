@@ -157,6 +157,13 @@ heap.insert(10);
 heap.printHorizontalTree();
 
 
-
-
-
+// insert(num) {
+//   this.heap.push(num);
+//       let currIndex = this.heap.length -1;
+//       while(this.heap[currIndex] < this.heap[Math.floor(currIndex/2)]){
+//           let tempIndex = Math.floor(currIndex/2);
+//           let tempValue = this.heap[Math.floor(currIndex/2)];
+//           this.heap[tempIndex] = this.heap[currIndex];
+//           this.heap[currIndex] = tempValue;
+//           currIndex = tempIndex;
+// }
