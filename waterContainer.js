@@ -107,6 +107,27 @@ function maxArea(height){
 }
 console.log(maxArea(height))
 
+// function maxContainer(height){
+//     // use pointer method
+//     let left = 0
+//     let right = height.length-1
+//     let area = 0
+
+//     //use while loop
+//     while(left<right){
+//         tempArea = (right-left)*Math.min(height[left],height[right])
+//         area = Math.max(area, tempArea)
+
+//         if(height[left]>height[right]){
+//             right--
+//         }else{
+//             left++
+//         }
+//     }
+//     return area
+
+// }
+
 function maxContainer(height){
     // use pointer method
     let left = 0
