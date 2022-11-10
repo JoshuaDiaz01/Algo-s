@@ -97,6 +97,28 @@ let s = "A man, a plan, a canal: Panama"
 
 // console.log(palindrome(s))
 
+// function palindrome(s){
+//     //non alphanumerical inputs
+//     //use regex
+//     s = s.replace(/[^a-z0-9]/gi,"")
+//     //initiate our pointers
+//     let leftIndex = 0 
+//     let rightIndex = s.length-1
+
+//     //while loop for crossing of right index
+//     while(leftIndex<rightIndex){
+//         if(s[leftIndex].toLowerCase() !== s[rightIndex].toLowerCase()){
+//             return "is not a palindrome"
+//         }
+//         leftIndex++
+//         rightIndex--
+//     }
+//         return "is a palindrome"
+// }
+
+
+// console.log(palindrome(s))
+
 function palindrome(s){
     //non alphanumerical inputs
     //use regex
