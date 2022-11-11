@@ -52,6 +52,20 @@ let prices = [7,1,5,3,6,4]
 // }
 // console.log(maxProfit(prices))
 
+// function maxProfit(prices){
+//     let maxprof = 0
+//     let minVal = Infinity
+//     //loop through prices
+//     for(let i=0; i<prices.length; i++){
+//         //we want to set a running min until the mininum is found
+//         minVal = Math.min(minVal,prices[i])
+//         //need a max so we do same thing
+//         maxprof = Math.max(maxprof, prices[i]-minVal)
+//     }
+//     return maxprof
+// }
+// console.log(maxProfit(prices))
+
 function maxProfit(prices){
     let maxprof = 0
     let minVal = Infinity
