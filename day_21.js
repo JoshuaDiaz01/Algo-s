@@ -6,8 +6,11 @@ const num2 = 6.8;
 const expected2 = 720;
 // Explanation: 1*2*3*4*5*6 = 720
 
+
+
 const num3 = 0;
-const expected3 = 1;
+const expected3 = 1
+const expected4 = 6
 
 function factorial(num) {
     num = Math.floor(num)
@@ -45,5 +48,4 @@ const two_expected5 = 3;
 
 const two_num6 = 8;
 const two_expected6 = 21;
-
 
