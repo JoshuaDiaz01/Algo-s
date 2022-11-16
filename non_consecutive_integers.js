@@ -48,4 +48,23 @@ function allNonConsecutive(sortedNums) {
     }
   }
   return nonConsecutiveNums;
+
+}
+
+function allNonConsecutive(sortedNums) {
+  const nonConsecutiveNums = [];
+
+  for (let i = 1; i < sortedNums.length; i++) {
+    const prevNum = sortedNums[i - 1];
+    const currNum = sortedNums[i];
+
+    if (prevNum + 1 !== currNum) {
+      nonConsecutiveNums.push({
+        i: i,
+        n: currNum,
+      });
+    }
+  }
+  return nonConsecutiveNums;
+
 }
