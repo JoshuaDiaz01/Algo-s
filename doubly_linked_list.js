@@ -239,3 +239,5 @@ const emptyList = new DoublyLinkedList();
 //   -7,
 //   -2,
 // ]);
+
+const newList = new DoublyLinkedList();
