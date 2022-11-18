@@ -130,6 +130,22 @@
    * Logs the tree horizontally with the root on the left and the index in
    * parenthesis using reverse inorder traversal.
    */
+  // printHorizontalTree(parentIdx = 1, spaceCnt = 0, spaceIncr = 10) {
+  //   if (parentIdx > this.heap.length - 1) {
+  //     return;
+  //   }
+
+  //   spaceCnt += spaceIncr;
+  //   this.printHorizontalTree(parentIdx * 2 + 1, spaceCnt);
+
+  //   console.log(
+  //     " ".repeat(spaceCnt < spaceIncr ? 0 : spaceCnt - spaceIncr) +
+  //       `${this.heap[parentIdx]} (${parentIdx})`
+  //   );
+
+  //   this.printHorizontalTree(parentIdx * 2, spaceCnt);
+  // }
+
   printHorizontalTree(parentIdx = 1, spaceCnt = 0, spaceIncr = 10) {
     if (parentIdx > this.heap.length - 1) {
       return;
@@ -145,7 +161,6 @@
 
     this.printHorizontalTree(parentIdx * 2, spaceCnt);
   }
-
 }
 heap.insert(1);
 heap.insert(2);
