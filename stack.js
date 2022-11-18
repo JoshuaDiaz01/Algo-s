@@ -116,3 +116,4 @@ llStack.push(4);
 console.log(llStack.pop())
 console.log(llStack.peek())
 console.log(llStack.size())
+var newStack = new Stack();
