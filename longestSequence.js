@@ -181,6 +181,7 @@ function longestConsecutive(nums){
     }
     max = Math.max(max,currMax)
 
+    
 }
 return max
 
