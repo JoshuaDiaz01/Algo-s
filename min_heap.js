@@ -172,6 +172,7 @@ heap.insert(10);
 heap.printHorizontalTree();
 
 
+
 // insert(num) {
 //   this.heap.push(num);
 //       let currIndex = this.heap.length -1;
