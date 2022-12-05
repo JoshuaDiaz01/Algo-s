@@ -55,5 +55,6 @@ function selectionSort(nums = []) {
     // reset idxOfCurrMin to the next selected index we are going to work with to find the next min
     idxOfCurrMin = selectedIdx;
   }
+  
   return nums;
 }
