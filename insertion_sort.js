@@ -79,3 +79,4 @@ function insertionSortSwap(nums = []) {
 
 console.log(insertionSortSwap(numsRandomOrder));
 Footer
+
