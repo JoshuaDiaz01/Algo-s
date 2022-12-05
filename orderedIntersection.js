@@ -75,5 +75,6 @@ function orderedIntersection(sortedA, sortedB) {
       idxB++;
     }
   }
+  
   return intersection;
 }
