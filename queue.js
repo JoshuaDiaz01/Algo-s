@@ -28,6 +28,7 @@
    * - Space: O(1) constant.
    * @returns {any} The first item or undefined if empty.
    */
+   
   dequeue() {
       return this.items.shift();
   }
