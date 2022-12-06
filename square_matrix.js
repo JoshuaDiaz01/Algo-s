@@ -56,6 +56,7 @@ const squareMatrix1 = [
   console.log(diagonalDifference(squareMatrix2))
 
 
+  
   /* 
   Union Sorted Arrays
   Efficiently combine two already-sorted multiset arrays
