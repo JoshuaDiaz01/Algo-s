@@ -65,6 +65,7 @@ function partition(nums, leftIdx = 0, rightIdx = nums.length - 1) {
   // position can be kept track of, then move it last to its final position.
   [nums[midIdx], nums[tempPivotIdx]] = [nums[tempPivotIdx], nums[midIdx]];
 
+  
   // Skip over the pivot that was moved to the end so it stays there for now.
   rightIdx = tempPivotIdx - 1;
 
