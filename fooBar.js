@@ -36,5 +36,6 @@ function oneToHundred(array){
     return array
 }
 
+
 console.log(oneToHundred(array))
 let hey = 0
