@@ -50,6 +50,7 @@ function selectionSort(nums = []) {
         nums[idxOfCurrMin],
         nums[selectedIdx],
       ];
+      
     }
     selectedIdx += 1;
     // reset idxOfCurrMin to the next selected index we are going to work with to find the next min
