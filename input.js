@@ -56,6 +56,7 @@ function insert(tableName, columnValuePairs) {
       }
     }
   }
+  
   return `INSERT INTO ${tableName} (${columns}) VALUES (${values});`;
 }
 
