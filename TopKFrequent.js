@@ -18,6 +18,7 @@ var topKFrequent = function(nums, k) {
         } else{
             seen[num]++
         }
+        
     }
     //bucket method- the amount of numbers in the array dictate the amount of buckets
     //the amount of repeated nums dictates the bucket those nums go into
