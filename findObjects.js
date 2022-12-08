@@ -40,6 +40,7 @@ const items = [
    * @param {Array<Object>} collection
    * @returns {Array<Object>} The found objects.
    */
+  
   function findObjects(criteria, collection) {
     const foundDocuments = [];
   
