@@ -85,6 +85,7 @@ const friend1 = {
    *    1. not practicing social distancing.
    *    2. have a friend who is not practicing social distancing whom hasCovid.
    */
+  
   function coronaVirusAtRisk(persons) {
     const atRiskPersons = [];
   
