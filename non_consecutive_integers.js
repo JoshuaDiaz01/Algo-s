@@ -62,6 +62,7 @@ function allNonConsecutive(sortedNums) {
       nonConsecutiveNums.push({
         i: i,
         n: currNum,
+        
       });
     }
   }
