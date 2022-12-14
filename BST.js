@@ -23,6 +23,7 @@
     }
   }
   
+  
   /**
    * Represents an ordered tree of nodes where the data of left nodes are <= to
    * their parent and the data of nodes to the right are > their parent's data.
