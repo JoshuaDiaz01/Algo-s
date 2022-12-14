@@ -16,6 +16,7 @@ function addToX(amount) {
     return x + amount;
     console.log("hello there");//after return, nothing will be console logged//
 }
+
     
 console.log(x);
 var result = addToX(-10);
