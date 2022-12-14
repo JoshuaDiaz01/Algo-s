@@ -17,6 +17,7 @@ Associative arrays are sometimes called maps because a key (string) maps to a va
 // const vals1 = [];
 // const expected2 = {};
 
+
 const keys1 = ["abc", 3, "yo"];
 // const vals1 = [42, "wassup", true];
 const vals1 = [42, "wassup", true, "something"];
