@@ -52,6 +52,7 @@ const squareMatrix1 = [
     return Math.abs(sumLeftToRight - sumRightToLeft);
   }
 
+  
   console.log(diagonalDifference(squareMatrix1))
   console.log(diagonalDifference(squareMatrix2))
 
