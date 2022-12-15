@@ -147,6 +147,7 @@ const people = [
     return filteredItems;
   }
   
+  
   // early exit via not committing to lowerCasing full string
   // this would require a lot more hard-coding to handle the bonus search method
   function filterByKeyStartsWith2(items, searchFor, searchBy) {
