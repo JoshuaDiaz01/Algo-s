@@ -14,6 +14,7 @@ ispresent2d (arr2d,"");
 console.log(arr2d[0][2]);
 
 
+
 // We can console.log the `8` in this array if we
 // console.log(arr2d[0][2]);
 // the first index `0` will select the `[2, 5, 8]` sub-array
