@@ -11,6 +11,7 @@ console.log(x);
 //console:5,15
 
 var x = 5;
+
     
 function addToX(amount) {
     return x + amount;
