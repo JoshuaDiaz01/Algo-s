@@ -19,6 +19,7 @@
           can therefore be merged into a sorted array.
 */
 
+
 // merge
 const sortedA1 = [];
 const sortedB1 = [];
