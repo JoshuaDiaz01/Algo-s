@@ -58,6 +58,7 @@ let test2 = [1,2,3,4,5]
 // console.log(containsDuplicate(test1))
 // console.log(containsDuplicate(test2))
 
+
 function containsDuplicate(nums) {
     //use hashmap to store data and check if the nums are already in the hashmap
     let hash = {}
