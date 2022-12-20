@@ -61,6 +61,7 @@ function partition(nums, leftIdx = 0, rightIdx = nums.length - 1) {
   const pivotVal = nums[midIdx];
   const tempPivotIdx = rightIdx;
 
+  
   // Swap the pivot to the end of the section being partitioned so its
   // position can be kept track of, then move it last to its final position.
   [nums[midIdx], nums[tempPivotIdx]] = [nums[tempPivotIdx], nums[midIdx]];
