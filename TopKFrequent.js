@@ -30,6 +30,7 @@ var topKFrequent = function(nums, k) {
         //this creates bucket
         bucket.push([])
     }
+    
 
     //populating bucket, 
     // key is our num
