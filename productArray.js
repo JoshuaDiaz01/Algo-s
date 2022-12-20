@@ -65,6 +65,7 @@ function productExceptItself(nums) {
         nums[i] = left[i]*right[i];
     }
 
+    
     return nums;
 }
 
